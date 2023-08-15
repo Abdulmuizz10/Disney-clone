@@ -1,33 +1,41 @@
-import React from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
+import SignInPopUp from "./SignInPopUp";
 
 function Login() {
+  const [signInPopUp, setSignInPopUp] = useState(false);
+
   return (
     <Container>
       <CTA>
         <CtaLogoOne src="/images/cta-logo-one.svg" />
-        <SignUp><a href="/home" style={{"textDecoration": "none", "color": "#f9f9f9"}}>GET ALL THERE</a></SignUp>
+        <SignUp onClick={() => setSignInPopUp(true)}>
+          <a style={{ textDecoration: "none", color: "#f9f9f9" }}>
+            GET ALL THERE
+          </a>
+        </SignUp>
         <Description>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim architecto laboriosa
-        omnis praesentium accusamus eius officiis. Explicabo esse, deleniti consequuntur
-        delectus dolorem sed id.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+          architecto laboriosa omnis praesentium accusamus eius officiis.
+          Explicabo esse, deleniti consequuntur delectus dolorem sed id.
         </Description>
         <CtaLogoTwo src="/images/cta-logo-two.png" />
       </CTA>
+      {signInPopUp && <SignInPopUp setSignInPopUp={setSignInPopUp} />}
     </Container>
-  )
+  );
 }
 
-export default Login
+export default Login;
 
 const Container = styled.div`
   position: relative;
-  height: calc(100vh - 70px);
+  height: 100vh;
   display: flex;
   align-items: top;
   justify-content: center;
-  
+
   &:before {
     position: absolute;
     top: 0;
@@ -42,8 +50,7 @@ const Container = styled.div`
     z-index: -1;
     opacity: 0.7;
   }
-
-`
+`;
 
 const CTA = styled.div`
   max-width: 650px;
@@ -53,11 +60,8 @@ const CTA = styled.div`
   flex-direction: column;
   margin-top: 10px;
   align-items: center;
-`
-const CtaLogoOne = styled.img`
-
-
-`
+`;
+const CtaLogoOne = styled.img``;
 
 const SignUp = styled.a`
   width: 100%;
@@ -77,14 +81,14 @@ const SignUp = styled.a`
   &:hover {
     background: #0483ee;
   }
-`
+`;
 const Description = styled.p`
   text-align: center;
   font-size: 11px;
   letter-spacing: 1.5px;
   line-height: 1.5;
-`
+`;
 
 const CtaLogoTwo = styled.img`
   width: 90%;
-`
+`;
