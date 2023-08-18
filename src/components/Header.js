@@ -33,7 +33,7 @@ function Header() {
         </a>
       </NavMenu>
 
-      <UserImg src="/images/IMG_20200617_153925.jpg" />
+      <UserImg src="/images/logo (1).svg" />
     </Nav>
   );
 }

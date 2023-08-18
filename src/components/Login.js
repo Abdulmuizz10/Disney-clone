@@ -1,19 +1,23 @@
-import React, { useState } from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
-import SignInPopUp from "./SignInPopUp";
+import { Link } from "react-router-dom";
+// import SignInPopUp from "./SignInPopUp";
 
 function Login() {
-  const [signInPopUp, setSignInPopUp] = useState(false);
+  // const [signInPopUp, setSignInPopUp] = useState(false);
 
   return (
     <Container>
       <CTA>
         <CtaLogoOne src="/images/cta-logo-one.svg" />
-        <SignUp onClick={() => setSignInPopUp(true)}>
+        {/* <SignUp onClick={() => setSignInPopUp(true)}>
           <a style={{ textDecoration: "none", color: "#f9f9f9" }}>
             GET ALL THERE
           </a>
+        </SignUp> */}
+        <SignUp>
+          <Link to="/home" style={{ textDecoration: "none", color: "#f9f9f9" }}>
+            GET ALL THERE
+          </Link>
         </SignUp>
         <Description>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
@@ -22,7 +26,7 @@ function Login() {
         </Description>
         <CtaLogoTwo src="/images/cta-logo-two.png" />
       </CTA>
-      {signInPopUp && <SignInPopUp setSignInPopUp={setSignInPopUp} />}
+      {/* {signInPopUp && <SignInPopUp setSignInPopUp={setSignInPopUp} />} */}
     </Container>
   );
 }
