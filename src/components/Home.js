@@ -38,5 +38,9 @@ const Container = styled.main`
   p {
     text-align: center;
     font-size: 1.2rem;
+
+    @media (max-width: 568px) {
+      font-size: 0.8rem;
+    }
   }
 `;
