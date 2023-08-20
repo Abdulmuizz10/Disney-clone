@@ -7,7 +7,7 @@ import Viewers from "./Viewers";
 function Home() {
   return (
     <Container>
-      <ImgSlider />
+      <ImgSlider/>
       <Viewers />
       <Movies />
       <p>Copywrite ©2022 | Made by Abdul Muizz</p>

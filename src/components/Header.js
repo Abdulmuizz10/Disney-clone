@@ -93,7 +93,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 36px;
   overflow-x: hidden;
-  z-index: 100;
+  z-index: 10;
 
   /* @media (max-width: 568px) {
     height: 50px;
@@ -191,23 +191,23 @@ const UserImg = styled.img`
 `;
 
 const MobileNavbar = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   /* background: #0b0b0b; */
   background-color: #070a16;
-  height: 1000vh;
+  height: 100vh;
   width: 100%;
-  z-index: 100000;
+  z-index: 1000;
 
   .close {
     position: relative;
     i {
       position: absolute;
-      top: 23px;
-      right: 35px;
+      top: 25px;
+      right: 36px;
       color: #fff;
       font-size: 30px;
       cursor: pointer;
